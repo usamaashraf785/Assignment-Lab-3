@@ -5,69 +5,108 @@ getName, getAddress, setAddress, toString (which gives a string description of t
 should display the Person in the given format even when print(obj) is called). There is one
 constructor which takes in the name and the address. Similarly, write the class called Student and
 Staff. [Double means the answer should be a decimal number].
-"""""
+""" ""
 
-class Person():
 
-    def __init__(self,name,address):
+class Person:
+    def __init__(self, name, address):
         self.name = name
         self.address = address
+
     def getName(self):
         return self.name
+
     def getAddress(self):
         return self.address
-    def setAddress(self,ads):
+
+    def setAddress(self, ads):
         self.address = ads
-    def toString(self):
-        print(self.name,"R/O",self.address)
 
-newPerson = Person("Usama","11/1AL")
-print("Name is:",newPerson.getName())
-print("Address is:",newPerson.getAddress())
-print("By Tostring method:",newPerson.toString())
+    def __repr__(self):
+        return self.name + " R/O " + self.address
 
-class Student():
 
-    def __init__(self,name,address,program,year,fee):
+newPerson = Person("Usama", "11/1AL")
+print("Name is:", newPerson.getName())
+print("Address is:", newPerson.getAddress())
+print("By Tostring method:", newPerson)
+
+
+class Student:
+    def __init__(self, name, address, program, year, fee):
         self.program = program
         self.year = year
         self.fee = fee
-        self.obj = Person(name,address)
+        self.obj = Person(name, address)
+
     def getProgram(self):
         return self.program
-    def setProgram(self,pro):
+
+    def setProgram(self, pro):
         self.program = pro
+
     def getYear(self):
         return self.year
-    def setYear(self,yr):
+
+    def setYear(self, yr):
         self.year = yr
+
     def getFee(self):
         return self.fee
-    def setFee(self,fi):
+
+    def setFee(self, fi):
         self.fee = fi
+
     def toString(self):
-        print(self.obj.getName(),"R/O",self.obj.getAddress(),"Doing",self.program,
-                     "with semester fee of ", self.fee, " In ",self.year)
+        print(
+            self.obj.getName(),
+            "R/O",
+            self.obj.getAddress(),
+            "Doing",
+            self.program,
+            "with semester fee of ",
+            self.fee,
+            " In ",
+            self.year,
+        )
 
 
-newstudent = Student(newPerson.name,newPerson.address,"BS Software Engineering", "2021", "60,000")
+newstudent = Student(
+    newPerson.name, newPerson.address, "BS Software Engineering", "2021", "60,000"
+)
 print(newstudent.toString())
 
-class Staff():
-    def __init__(self,name,address,school,pay):
+
+class Staff:
+    def __init__(self, name, address, school, pay):
         self.school = school
         self.pay = pay
-        self.obj = Person(name,address)
+        self.obj = Person(name, address)
+
     def getSchool(self):
         return self.school
-    def setSchool(self,scl):
+
+    def setSchool(self, scl):
         self.school = scl
+
     def getPay(self):
         return self.pay
-    def setPay(self,py):
-        self.pay = py
-    def toString(self):
-        print(self.obj.name,"Resident of",self.obj.address," From ",self.school," Earning ",self.pay," Dollers ")
 
-newstaf = Staff(newPerson.name,newPerson.address,"GCUF", "10,000")
+    def setPay(self, py):
+        self.pay = py
+
+    def toString(self):
+        print(
+            self.obj.name,
+            "Resident of",
+            self.obj.address,
+            " From ",
+            self.school,
+            " Earning ",
+            self.pay,
+            " Dollers ",
+        )
+
+
+newstaf = Staff(newPerson.name, newPerson.address, "GCUF", "10,000")
 print(newstaf.toString())
