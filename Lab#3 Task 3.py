@@ -7,12 +7,28 @@ function) and the volume (which should use the Circle class area function).
 
 # Composite Class
 class Circle():
+    """
+    Circle is a composite class which will give the area of circle to other class
+    cylinder by composition
+    """
     def __init__(self, r):
+        """
+        Function is the constructor
+        :param r: (float) radius of the circle
+        """
         self.radius = r
     def area (self):
+        """
+        Function will calculate the area of cicle
+        :param h: None
+        :return radius: (float) radius of the circle
+        """
         return self.radius**2*3.14
-# Component Class
 class Cylinder2():
+    """
+    Cylinder class will get value of area from class circle by composition
+    :return:
+    """
     def __init__(self,h,r):
         self.height = h
         self.obj1=Circle(r)

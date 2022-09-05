@@ -1,39 +1,44 @@
 """
 Task 1: Write a class called Circle, which has a instance variable, radius. Write methods to
 calculate the area of the circle and modify the radius
-""" ""
-
-
-class Circle:
+"""""
+class Circle():
     """
-    The purpose of the class is to
+    Class is made for the calculation of area and modifying the radius
     """
-
     def __init__(self, r):
-        self.__radius = r  # private object attribute
-
-    def area(self):
+        """        Function is a constructor and contains the parameter
+        :param r:
+        :return : None
         """
-        What the function does
-
-        :return: (float) the area of the cirlce
+        self.__radius = r
+    def Area (self):
         """
-        return self.__radius ** 2 * 3.14
-
+        Function will calculate the Area
+        :param : None
+        :return: (float)Area of the circle
+        """
+        return self.__radius**2*3.14
     def set_radius(self, radius):
         """
-        Purpose of the function
-
+        The function will modify the Radius
         :param radius: (float) radius of the circle
-
         :return: (None)
         """
         self.__radius = radius
 
     def get_radius(self):
+        """
+        The function will set the value of radius as a setter
+        :return: (float) Radius of the circle
+        """
         return self.__radius
 
 
 if __name__ == "__main__":
-    new_circle = Circle(8)
-    print("Area of Circle is:", newcircle.area())
+    newCircle = Circle(8)
+    print("Area of Circle is:",newCircle.Area())
+
+
+
+
