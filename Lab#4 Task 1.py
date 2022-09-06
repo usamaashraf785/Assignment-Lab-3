@@ -2,6 +2,8 @@
 Task 1 Write the codes for all the classes as shown in the class diagram. The toString() method gives a string
 description of the object and should display in the given format even when print(obj) is called.
 """
+
+
 List = ["Eagle bhai", "Suzy", "Kitana", "Tony","Jacky"]
 
 class Animal():
@@ -23,7 +25,7 @@ class Animal():
         Function will return the name
         :return: name (string)
         """
-        print("Name of the Animal is:",self.name)
+        print("Name of the Animal is:" + self.name)
 
 
 class Mammal(Animal):
@@ -44,7 +46,7 @@ class Mammal(Animal):
         function will return the name of the Mammal
         :return: name (string)
         """
-        return print("Name of the Mammal is:",self.name)
+        return print("Name of the Mammal is:" + self.name)
 
 
 class Cat(Mammal):
@@ -66,14 +68,14 @@ class Cat(Mammal):
         function will print the greetings of the cat
         :return: None
         """
-        print("Meow")
+        print(self.name,"Greets Meow!")
 
     def __repr__(self):
         """
         function will tostring the description
         :return: None
         """
-        print("The ",self.name,"Greets",Cat.__Greets(self))
+        print("The " + self.name + "Greets", Cat.__Greets(self))
 
 class Dog(Mammal):
     """
@@ -84,8 +86,8 @@ class Dog(Mammal):
     def __init__(self,name,name2):
         """
         Function is constructor of the class
-        :param name: (string) name of the first class
-        :param name2: (string) name of the 2nd class
+        :param name: (string) name of the first dog
+        :param name2: (string) name of the 2nd dog
         """
         Mammal.__init__(self,name)
         self.name2 = name2
@@ -108,10 +110,10 @@ class Dog(Mammal):
 
     def __repr__(self):
         """
-        function will prints the description of the class dog
+        function will print the description of the class dog
         :return: None
         """
-        print("The ",self.name," greeting ",self.name2)
+        print("The " + self.name + " greeting " + self.name2)
         Dog.__Greets(self,self.name)
         Dog.__Greets1(self,self.name2)
 
