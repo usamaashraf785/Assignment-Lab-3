@@ -34,7 +34,7 @@ class Calender:
     def date(self):
         """
         function will display the date in format dd/mm/yyyy
-        :return:
+        :return: str description
         """
         return str(self.__days) + "/" + str(self.__months) + "/" + str(self.__years)
 
@@ -42,7 +42,7 @@ class Calender:
         """
         function will range the days in between 1 and 31
         and will range the months in between 1 and 12
-        :return:
+        :return: str
         """
         lstM = [i for i in range(1, 12 + 1)]
         lstD = [i for i in range(1, 31 + 1)]
@@ -56,7 +56,7 @@ class Calender:
     def LeapYear(self):
         """
         function will check either the year is leap or not
-        :return:
+        :return: str
         """
 
         if (self.__years % 400 == 0) and (self.__years % 100 == 0):

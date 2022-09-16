@@ -39,21 +39,17 @@ class Calendar():
         """
         function will range the days in between 1 and 31
         and will range the months in between 1 and 12
-        :return:
+        :return: print statement
         """
         lstM = [i for i in range(1, 12 + 1)]
         lstD = [i for i in range(1, 31 + 1)]
-        if self.days in lstD:
-            return self.days
-        elif self.days not in lstD:
+
+        if self.days not in lstD:
             print("Day has to be an integer between 1 and 31!")
 
-        elif self.months in lstM:
-            return self.months
-        elif self.months not in lstM:
+        if self.months not in lstM:
             print("TypeError in Months:")
-        else:
-            print("Days and Months should be Integer")
+
 
 
 """
@@ -94,27 +90,23 @@ class Clock():
         """
         function will check the range of the hours in between 0 and 23
         and will range the minutes and seconds in between 0 and 59
-        :return:
+        :return: print statement
         """
         lstH = [i for i in range(0, 23 + 1)]
         lstMS = [i for i in range(0, 59 + 1)]
-        if self.hours in lstH:
-            return self.hours
-        elif self.hours not in lstH:
+
+        if self.hours not in lstH:
             print("Hour has to be an integer between 0 and 23!")
 
-        elif self.minutes in lstMS:
-            return self.minutes
-        elif self.minutes not in lstMS:
+        if self.minutes not in lstMS:
             print("Minutes should be of integer type between 0 and 59!")
-        elif self.seconds in lstMS:
-            return self.seconds
-        else:
+
+        if self.seconds not in lstMS:
             print("Seconds should be of integer type between 0 and 59!")
 
 
 
-class ClockCalendar(Calendar and Clock):
+class ClockCalendar (Calendar and Clock):
     """
     class is the child class of the base classes calendar and Clock
     :return
