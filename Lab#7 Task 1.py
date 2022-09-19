@@ -77,3 +77,5 @@ Cal = Calender(days, months, years)
 
 print(Cal.LeapYear())
 print(Cal.date())
+
+print(Cal.date())
